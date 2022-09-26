@@ -1,0 +1,42 @@
+<h2>Thông Tin Hóa Đơn Toàn Bộ Hàng Sách</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <div class="card">
+                <div class="card-header">
+                    HÓA ĐƠN THỐNG KÊ CHI TIÊU HÀNG SÁCH
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>STT</td>
+                                <td>Tên Hàng</td>
+                                <td>Số Lượng Nhập</td>
+                                <td>Hình Ảnh</td>
+                                <td>Đơn Giá</td>
+                                <td>Thành Tiền</td>
+                            </tr>
+
+                            <tr ng-repeat="b in list_book">
+                                <td><input ng-model="b.buy" type="checkbox" name="" id=""></td>
+                                <td>{{b.name}}</td>
+                                <td><input type="number" ng-model="b.soluongnhap" ng-disabled="!b.buy"></td>
+                                <td>
+                                    <img src="../images/{{b.photo}}" width="90" height="90" alt="">
+                                </td>
+                                <td>{{b.price|currency}}</td>
+                                <td>{{b.price * b.soluongnhap |currency}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    TỔNG TIỀN {{gettongtien() |currency }} + Phụ thêm thuế {{gettongthue() |currency}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

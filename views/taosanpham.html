@@ -1,0 +1,75 @@
+<h2>Tạo Sản phẩm</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <form>
+                <div class="form-group">
+                    <label>Tên Sách</label>
+                    <input ng-model="book.name" class="form-control" type="text" name="">
+                </div>
+
+                <div class="form-group">
+                    <label>Hình Ảnh</label>
+                    <input ng-model="book.photo" class="form-control" type="text" name="">
+                </div>
+
+                <div class="form-group">
+                    <label>Đơn Giá</label>
+                    <input ng-model="book.price" class="form-control" type="text" name="">
+                </div>
+
+                <div class="form-group">
+                    <label>Số Lượng Nhập</label>
+                    <input ng-model="book.soluongnhap" class="form-control" type="text" name="">
+                </div>
+
+                <div class="form-group">
+                    <label>Số Lượng bán</label>
+                    <input ng-model="book.soluongban" class="form-control" type="text" name="">
+                </div>
+                <button ng-click="save()" ng-disabled="index != -1" class="btn btn-primary" type="button">Save</button>
+                <button ng-click="update()" ng-disabled="index == -1" class="btn btn-primary" type="button">Sửa</button>
+                <button ng-click="delete()" ng-disabled="index == -1" class="btn btn-primary" type="button">Xóa</button>
+                <button ng-click="cancel()" class="btn btn-primary" type="button">Hủy</button>
+                <button ng-click="clear()" class="btn btn-primary" type="button">Mới</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Tên Sách</td>
+                        <td>Hình Ảnh Sách</td>
+                        <td>Đơn Giá</td>
+                        <td>Số Lượng Nhập</td>
+                        <td>Số Lượng Bán</td>
+                        <td>Xếp Loại</td>
+                    </tr>
+                    <tr ng-repeat = "b in list_book">
+                        <td>{{b.name}}</td>
+                        <td>
+                            <img src="../images/{{b.photo}}" width="190" height="230" alt="">
+                        </td>
+                        <td>{{b.price | currency }}</td>
+                        <td>{{b.soluongnhap}}</td>
+                        <td>{{b.soluongban}}</td>
+                        <td>
+                            <span ng-if="b.soluongban < 5">Ít được Quan Tâm</span>
+                            <span ng-if="b.soluongban >= 5 && b.soluongban <= 8">Vẫn đủ Chỉ Tiêu</span>
+                            <span ng-if="b.soluongban > 8 ">Loại Sách bán chạy</span>
+                        </td>
+                        <td>
+                            <a href="#!taosanpham" ng-click="edit($index)">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

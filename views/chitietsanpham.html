@@ -1,0 +1,22 @@
+<h1>Chi Tiết Sản Phẩm</h1>
+
+<div class="container">
+    <div class="row" ng-repeat="sach in list_sach">
+        <div class="col-sm-5">
+            <img src="../images/{{sach.photo}}" width="300" alt="">
+        </div>
+        <div class="col-sm-7">
+            <h1 style="margin-top: 100px;">Thông tin về Loại Sách</h1>
+            <ul style="line-height: 40px; font-size: 20px;">
+               <li>Tên Sách: {{sach.name}}</li>
+                <li>Đơn Giá: {{sach.price}}</li>
+                <li>Đã Bán: {{sach.soluongban}}</li>
+                <li> Mức Phổ Biến của Sách Này:
+                    <span ng-if="sach.soluongban < 5">rất Ít</span>
+                    <span ng-if="sach.soluongban >= 5 && sach.soluongban <= 8">Ở Mức Bình Thường</span>
+                    <span ng-if="sach.soluongban > 8 ">Được Chọn Đọc rất nhiều</span>
+                </li>
+           </ul>
+        </div>
+    </div>
+</div>

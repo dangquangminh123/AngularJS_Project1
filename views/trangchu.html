@@ -1,0 +1,33 @@
+<style>
+    .card{
+        margin-top: 20px;
+    }
+    .card-header {
+        color: rgb(163, 163, 163);
+        background-color: #1f1c1b;
+        border-color: #007bff;
+    }
+</style>
+<div class="container">
+    <h3 style="color: #1f1c1b;">Cửa Hàng Sách Chúng Tôi Xin Chào Bạn Đọc Giả</h3>
+    <div class="row text-center">
+        <div class="col-sm-3" ng-repeat="b in list_book">
+            <div class="card">
+                <div class="card-header">
+                    {{b.name}}
+                </div>
+                <div class="card-body">
+                    <img src="../images/{{b.photo}}" width="190" height="230" alt="">
+                </div>
+                <div class="card-body">
+                    {{b.price | currency }}
+                    <span style="color: green;">Đã Bán {{b.soluongban}}</span>
+                </div>
+                <div class="card-footer">
+                    <a href="#!view/{{b.name}}/{{b.photo}}/{{b.price}}/{{b.soluongban}}">
+                        <button type="button" class="btn btn-primary btn-cart">Xem Chi Tiết</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

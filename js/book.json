@@ -1,0 +1,21 @@
+[
+    {"name":"Sách Angular JS căn bản","photo":"angularJS_canban.png","price":10,"soluongnhap":15,"soluongban":5},
+    {"name":"Sách java căn bản","photo":"javacore.jpg","price":8,"soluongnhap":25,"soluongban":10 },
+    {"name":"Sách javascript cơ bản","photo":"javacript_canban.jpg","price":12,"soluongnhap":15,"soluongban":10 },
+    {"name":"Sách Laravel cơ bản","photo":"laravel_canban.jpg","price":16,"soluongnhap":21,"soluongban":12 },
+    {"name":"Sách NodeJS cơ bản","photo":"nodeJS_canban.jpg","price":14,"soluongnhap":15,"soluongban":6 },
+    {"name":"Sách PHP cơ bản","photo":"php_canban.png","price":16,"soluongnhap":30,"soluongban":13 },
+    {"name":"Sách PYTHON cơ bản","photo":"python_canban.jpg","price":11,"soluongnhap":19,"soluongban":9 },
+    {"name":"Sách ngôn ngữ java","photo":"ngonngujava.png","price":12,"soluongnhap":15,"soluongban":7 },
+    {"name":"Sách trí tuệ nhân tạo","photo":"trituenhantao.jpg","price":18,"soluongnhap":35,"soluongban":15 },
+    {"name":"AngularJS Nâng cao","photo":"angularJS.jpg","price":22,"soluongnhap":40,"soluongban":20 },
+    {"name":"Java Nâng Cao","photo":"java_nangcao.jpg","price":28,"soluongnhap":15,"soluongban":5 },
+    {"name":"Laravel","photo":"laravel.jpg","price":14,"soluongnhap":21,"soluongban":11 },
+    {"name":"NodeJS","photo":"nodeJS.jpg","price":16,"soluongnhap":17,"soluongban":7 },
+    {"name":"ReactJS Căn Bản","photo":"reactJS_canban.jpg","price":16,"soluongnhap":7,"soluongban":3 },
+    {"name":"ReactJS Nâng Cao","photo":"reactJS.jpg","price":12,"soluongnhap":22,"soluongban":12 },
+    {"name":"JavaScript","photo":"sachjavascript.jpg","price":18,"soluongnhap":18,"soluongban":10 },
+    {"name":"PHP nâng cao","photo":"sachphp.jpg","price":20,"soluongnhap":25,"soluongban":15 },
+    {"name":"tuyển tập python đầy đủ","photo":"sachpython.jpg","price":15,"soluongnhap":21,"soluongban":16 },
+    {"name":"Tủ Sách Thông Minh","photo":"sachthongminh.jpg","price":19,"soluongnhap":25,"soluongban":16 }
+]
